@@ -10,6 +10,15 @@ program
   .version(version);
 
 program
+  .command('clone <url>')
+  .description('Clone a repo and auto-install dependencies')
+  .option('--path <dir>', 'Parent directory to clone into (default: cwd)')
+  .action((url, options) => {
+    const { runClone } = require('../src/commands/clone');
+    runClone(url, options);
+  });
+
+program
   .command('init')
   .description('Full repo setup: git init + .gitignore + commit + push')
   .option('--path <dir>', 'Target directory (default: cwd)')

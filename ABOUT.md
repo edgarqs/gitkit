@@ -27,6 +27,7 @@ git push -u origin main
 
 | Comando | Qué hace |
 |---|---|
+| `gitkit clone <url>` | Clona repo + detecta package manager + instala dependencias |
 | `gitkit init` | Flujo completo: git init + .gitignore + primer commit + push a GitHub |
 | `gitkit sync [mensaje]` | Ciclo completo: pull + add + commit + push en un solo paso |
 | `gitkit push [mensaje]` | Push rápido: add + commit + push en un solo paso |

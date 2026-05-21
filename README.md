@@ -24,6 +24,18 @@ pnpm add -g .
 
 ## Commands
 
+### `gitkit clone <url>`
+
+Clone a repo and auto-install dependencies. Detects the package manager from lock files and config files, then asks if you want to install.
+
+**Supports:** pnpm, npm, yarn, composer, pip, pipenv.
+
+```bash
+gitkit clone https://github.com/user/repo
+gitkit clone git@github.com:user/repo.git
+gitkit clone <url> --path /parent/dir
+```
+
 ### `gitkit init`
 
 Full initial repo setup flow. Run inside your project folder.
