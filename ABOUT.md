@@ -30,6 +30,10 @@ git push -u origin main
 | `gitkit init` | Flujo completo: git init + .gitignore + primer commit + push a GitHub |
 | `gitkit sync [mensaje]` | Ciclo completo: pull + add + commit + push en un solo paso |
 | `gitkit push [mensaje]` | Push rápido: add + commit + push en un solo paso |
+| `gitkit status` | Dashboard visual del estado del repo |
+| `gitkit log [-n N] [--all]` | Historial compacto y coloreado |
+| `gitkit branch [nombre]` | Listar, crear o eliminar ramas locales |
+| `gitkit undo [--hard]` | Deshacer último commit (soft por defecto) |
 | `gitkit ignore list` | Muestra los templates disponibles |
 | `gitkit ignore add <template>` | Aplica un template al proyecto (merge sin duplicados) |
 
@@ -67,6 +71,20 @@ cd gitkit
 
 pnpm install
 pnpm add -g .
+```
+
+## Distribución
+
+| Canal | URL |
+|---|---|
+| npm / pnpm registry | https://www.npmjs.com/package/@edgarqs/gitkit |
+| Código fuente | https://github.com/edgarqs/gitkit |
+| Licencia | MIT |
+
+Publicado como paquete público con scope `@edgarqs`. Cualquier usuario instala sin clonar el repo:
+
+```bash
+pnpm add -g @edgarqs/gitkit
 ```
 
 ## Stack

@@ -13,6 +13,23 @@ async function runPush(message, options) {
     process.exit(1);
   }
 
+  const git = simpleGit(workDir);
+
+  await runStep('git add .', () => git.add('.'));
+
+  const status = await git.status();
+  const hasChanges =
+    status.staged.length > 0 ||
+    status.modified.length > 0 ||
+    status.not_added.length > 0 ||
+    status.created.length > 0 ||
+    status.deleted.length > 0;
+
+  if (!hasChanges) {
+    console.log('\n' + chalk.yellow('  Sin cambios para commit.\n'));
+    process.exit(0);
+  }
+
   let commitMessage = message;
   if (!commitMessage) {
     const { msg } = await inquirer.prompt([{
@@ -24,9 +41,6 @@ async function runPush(message, options) {
     commitMessage = msg.trim();
   }
 
-  const git = simpleGit(workDir);
-
-  await runStep('git add .', () => git.add('.'));
   await runStep(`git commit: "${commitMessage}"`, () => git.commit(commitMessage));
   await runStep('git push', () => git.push());
 

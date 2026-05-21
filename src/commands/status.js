@@ -20,7 +20,7 @@ function suggest(status, ahead, behind, hasStaged, hasUnstaged, hasUntracked) {
   if (status.conflicted.length > 0)
     return chalk.red('→ Tienes conflictos. Resuélvelos antes de continuar.');
   if (behind > 0)
-    return chalk.yellow(`→ Estás ${behind} commit(s) detrás de origin. Haz git pull primero.`);
+    return chalk.yellow(`→ Estás ${behind} commit(s) detrás de origin. Ejecuta: gitkit sync`);
   if (hasStaged)
     return chalk.cyan('→ Tienes cambios staged. Ejecuta: gitkit push "mensaje"');
   if (hasUnstaged || hasUntracked)

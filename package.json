@@ -1,8 +1,28 @@
 {
   "name": "@edgarqs/gitkit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool that simplifies common Git workflows",
   "license": "MIT",
+  "author": "edgarqs",
+  "homepage": "https://github.com/edgarqs/gitkit#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edgarqs/gitkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edgarqs/gitkit/issues"
+  },
+  "keywords": [
+    "git",
+    "cli",
+    "workflow",
+    "gitignore",
+    "push",
+    "init",
+    "sync",
+    "branch",
+    "developer-tools"
+  ],
   "main": "bin/gitkit.js",
   "bin": {
     "gitkit": "./bin/gitkit.js"

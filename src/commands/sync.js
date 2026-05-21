@@ -21,6 +21,14 @@ async function runSync(message, options) {
   await runStep('git pull', () => git.pull());
 
   const status = await git.status();
+
+  if (status.conflicted.length > 0) {
+    console.error(chalk.red(`\n  ✖ Pull generó conflictos en ${status.conflicted.length} archivo(s):`));
+    status.conflicted.forEach((f) => console.error(chalk.red(`    ${f}`)));
+    console.error(chalk.yellow('\n  Resuélvelos y ejecuta gitkit push "mensaje"\n'));
+    process.exit(1);
+  }
+
   const hasChanges =
     status.staged.length > 0 ||
     status.modified.length > 0 ||
