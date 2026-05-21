@@ -1,5 +1,5 @@
 {
-  "name": "gitkit",
+  "name": "@edgarqs/gitkit",
   "version": "1.0.0",
   "description": "CLI tool that simplifies common Git workflows",
   "main": "bin/gitkit.js",

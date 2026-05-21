@@ -52,16 +52,21 @@ git push -u origin main
 ## Instalación global
 
 ```bash
-git clone <este-repo>
-cd gitkit
-
 # pnpm (recomendado)
-pnpm install
-pnpm add -g .
+pnpm add -g @edgarqs/gitkit
 
 # npm (alternativa)
-npm install
-npm install -g .
+npm install -g @edgarqs/gitkit
+```
+
+### Desde código fuente
+
+```bash
+git clone https://github.com/edgarqs/gitkit
+cd gitkit
+
+pnpm install
+pnpm add -g .
 ```
 
 ## Stack

@@ -5,17 +5,21 @@ CLI tool that simplifies common Git workflows — initial repo setup and daily p
 ## Install
 
 ```bash
-# Clone the repo
-git clone <repo-url>
-cd gitkit
-
 # pnpm (recommended)
-pnpm install
-pnpm add -g .
+pnpm add -g @edgarqs/gitkit
 
 # npm (alternative)
-npm install
-npm install -g .
+npm install -g @edgarqs/gitkit
+```
+
+### Install from source
+
+```bash
+git clone https://github.com/edgarqs/gitkit
+cd gitkit
+
+pnpm install
+pnpm add -g .
 ```
 
 ## Commands
