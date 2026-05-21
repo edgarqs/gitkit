@@ -1,0 +1,22 @@
+{
+  "name": "gitkit",
+  "version": "1.0.0",
+  "description": "CLI tool that simplifies common Git workflows",
+  "main": "bin/gitkit.js",
+  "bin": {
+    "gitkit": "./bin/gitkit.js"
+  },
+  "scripts": {
+    "start": "node bin/gitkit.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "simple-git": "^3.22.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
