@@ -1,7 +1,8 @@
 {
   "name": "@edgarqs/gitkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool that simplifies common Git workflows",
+  "license": "MIT",
   "main": "bin/gitkit.js",
   "bin": {
     "gitkit": "./bin/gitkit.js"
