@@ -35,8 +35,13 @@ gitkit ignore add <template>
 
 **Command modules** (`src/commands/`):
 - `init.js` — full repo setup flow (git init → .gitignore → commit → remote → push)
+- `sync.js` — pull + add + commit + push; skips commit if no local changes
 - `push.js` — quick add/commit/push
 - `ignore.js` — list and merge `.gitignore` templates
+- `branch.js` — list, create, delete local branches
+- `log.js` — compact colorized commit history
+- `status.js` — visual repo status dashboard
+- `undo.js` — undo last commit (soft default, hard with confirmation)
 
 **Templates** (`src/templates/`): static `.gitignore` files consumed by both `init.js` (writes fresh file) and `ignore.js add` (merges into existing, deduplicates by line).
 

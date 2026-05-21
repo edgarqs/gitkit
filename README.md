@@ -39,6 +39,16 @@ gitkit init
 gitkit init --path /path/to/project
 ```
 
+### `gitkit sync [message]`
+
+Pull + add + commit + push in one step. Pulls remote changes first, then commits and pushes local changes. If there's nothing to commit after pulling, stops cleanly.
+
+```bash
+gitkit sync "update styles"
+gitkit sync              # prompts for message interactively
+gitkit sync --path /path/to/project "fix bug"
+```
+
 ### `gitkit push [message]`
 
 Quick daily push: `git add .` + `git commit -m` + `git push`.

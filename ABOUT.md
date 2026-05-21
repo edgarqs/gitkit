@@ -28,6 +28,7 @@ git push -u origin main
 | Comando | Qué hace |
 |---|---|
 | `gitkit init` | Flujo completo: git init + .gitignore + primer commit + push a GitHub |
+| `gitkit sync [mensaje]` | Ciclo completo: pull + add + commit + push en un solo paso |
 | `gitkit push [mensaje]` | Push rápido: add + commit + push en un solo paso |
 | `gitkit ignore list` | Muestra los templates disponibles |
 | `gitkit ignore add <template>` | Aplica un template al proyecto (merge sin duplicados) |
