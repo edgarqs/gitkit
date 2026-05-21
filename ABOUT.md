@@ -53,6 +53,12 @@ git push -u origin main
 ```bash
 git clone <este-repo>
 cd gitkit
+
+# pnpm (recomendado)
+pnpm install
+pnpm add -g .
+
+# npm (alternativa)
 npm install
 npm install -g .
 ```

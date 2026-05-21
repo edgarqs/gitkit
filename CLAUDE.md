@@ -5,11 +5,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Install & Setup
 
 ```bash
+# pnpm (recommended)
+pnpm install
+pnpm add -g .      # global install — exposes `gitkit` CLI
+
+# npm (alternative)
 npm install
-npm install -g .   # global install — exposes `gitkit` CLI
+npm install -g .
 ```
 
-After any change to `bin/gitkit.js` or `src/**`, the globally installed binary picks up changes immediately (symlinked by npm).
+After any change to `bin/gitkit.js` or `src/**`, the globally installed binary picks up changes immediately (symlinked by the package manager).
 
 ## Running
 

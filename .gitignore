@@ -1,0 +1,5 @@
+node_modules/
+
+# Lock files — each machine generates its own
+package-lock.json
+yarn.lock
